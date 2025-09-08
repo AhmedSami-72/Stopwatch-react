@@ -1,0 +1,157 @@
+.stopwatch-container {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.timer-display {
+  font-size: 3.5rem;
+  font-weight: bold;
+  font-family: 'Courier New', monospace;
+  color: #2c3e50;
+  margin-bottom: 30px;
+  text-align: center;
+  padding: 15px;
+  background: #f8f9fa;
+  border-radius: 10px;
+  width: 100%;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+button {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 100px;
+}
+
+.start-btn {
+  background: #27ae60;
+  color: white;
+}
+
+.start-btn:hover:not(:disabled) {
+  background: #219653;
+  transform: translateY(-2px);
+}
+
+.stop-btn {
+  background: #e74c3c;
+  color: white;
+}
+
+.stop-btn:hover:not(:disabled) {
+  background: #c0392b;
+  transform: translateY(-2px);
+}
+
+.lap-btn {
+  background: #3498db;
+  color: white;
+}
+
+.lap-btn:hover:not(:disabled) {
+  background: #2980b9;
+  transform: translateY(-2px);
+}
+
+.reset-btn {
+  background: #7f8c8d;
+  color: white;
+}
+
+.reset-btn:hover:not(:disabled) {
+  background: #636e72;
+  transform: translateY(-2px);
+}
+
+button:disabled {
+  background: #bdc3c7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.laps-section {
+  width: 100%;
+}
+
+.laps-title {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #2c3e50;
+  text-align: center;
+}
+
+.laps-list {
+  list-style-type: none;
+  max-height: 300px;
+  overflow-y: auto;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.lap-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 15px;
+  border-bottom: 1px solid #eee;
+  font-size: 1.1rem;
+}
+
+.lap-item:last-child {
+  border-bottom: none;
+}
+
+.lap-number {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.lap-time {
+  font-family: 'Courier New', monospace;
+  font-weight: bold;
+}
+
+.no-laps {
+  text-align: center;
+  color: #7f8c8d;
+  padding: 20px;
+}
+
+@media (max-width: 480px) {
+  .timer-display {
+    font-size: 2.8rem;
+  }
+  
+  button {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    min-width: 80px;
+  }
+  
+  .controls {
+    gap: 8px;
+  }
+  
+  .lap-item {
+    flex-direction: column;
+    text-align: center;
+    gap: 5px;
+  }
+}
